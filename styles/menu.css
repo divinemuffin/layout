@@ -1,0 +1,49 @@
+/* CREDITS: https://www.mobila.name/post/5172c6cbb4ab3/ */
+
+ul.sidemenu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.sidemenu > li {
+    position: relative;
+}
+ul.sidemenu > li > a {
+    display: block;
+    padding: 10px;
+    color: #777777;
+    text-decoration: none;
+}
+ul.sidemenu > li > a:hover {
+    color: black;
+}
+ul.submenu {
+    display: none;
+    width: 120px;
+    top: 37px;
+    left: 0;
+}
+ul.submenu > li {
+    display: list-item;
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: #777777;
+    text-decoration: none;
+}
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+ul.sidemenu > li:hover > ul.submenu {
+    display: block;
+}
