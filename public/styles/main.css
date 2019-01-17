@@ -94,6 +94,9 @@ header container {
     color:var(--pure_white);
 }
 /* CONTENT */
+main {
+    padding: 0px 10px;
+}
 .content-wrap {
     display: flex;
     padding: 0px 10px;

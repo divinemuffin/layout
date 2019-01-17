@@ -14,7 +14,7 @@ ul:after {
 }
 ul.sidemenu > li {
     position: relative;
-    padding: 6px 0px;
+    margin: 3px 0px;
 }
 ul.sidemenu > li > a {
     display: block;
@@ -28,7 +28,8 @@ ul.sidemenu > li > a:hover {
 ul.submenu {
     display: none;
     width: 100%;
-    padding: 10px 0 10px 10%;
+    margin: 6px 0 6px 10%;
+    padding: 0;
 }
 ul.submenu > li {
     display: list-item;
