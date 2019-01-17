@@ -4,7 +4,8 @@ these make the slideshow work
 */
 #slides{
 	position: relative;
-	height: 400px;
+	max-height: 462px;
+	height: 40vw;
 	padding: 0px;
 	margin: 0px;
 	list-style-type: none;
@@ -66,9 +67,9 @@ just for appearance; change whatever you want
   background: transparent;
   color: #333;
   border: none;
-  font-size: 60px;
-  cursor: pointer;
-  width: 100px;
+  font-size: 370%;
+	cursor: pointer;
+	width: 20%;
   height: 100px;
 }
 

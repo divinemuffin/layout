@@ -14,10 +14,11 @@ ul:after {
 }
 ul.sidemenu > li {
     position: relative;
+    padding: 6px 0px;
 }
 ul.sidemenu > li > a {
     display: block;
-    padding: 10px;
+    padding: 0;
     color: #777777;
     text-decoration: none;
 }
@@ -26,16 +27,14 @@ ul.sidemenu > li > a:hover {
 }
 ul.submenu {
     display: none;
-    width: 120px;
-    top: 37px;
-    left: 0;
+    width: 100%;
+    padding: 10px 0 10px 10%;
 }
 ul.submenu > li {
     display: list-item;
 }
 ul.submenu > li > a {
     display: block;
-    padding: 10px;
     color: #777777;
     text-decoration: none;
 }
