@@ -19,6 +19,8 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 
     font-family: 'Sans Reg','Lucida Sans Regular', sans-serif;
     font-size: 14px;
@@ -63,7 +65,7 @@ header .logo .text h1 {
     margin: 0;
 }
 
-header container {
+header section {
     display: flex;
     align-items: center;
     justify-content: space-between;
