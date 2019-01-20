@@ -4,6 +4,7 @@
 
 
 (function() {
+
     // Popup namespace
     let isVisible = true;
 
@@ -24,20 +25,30 @@
 
     }
 
-    emailInput.addEventListener("keyup", () => {
+    let checkEmailValidity = function() {
+
         if(!emailInput.checkValidity()) {
             submitBtn.disabled = true;
             console.log(emailInput.validationMessage);
         }
         else submitBtn.disabled = false;
+    }
+
+    checkEmailValidity(); // initial chaeck just in case
+    console.log("submitBtn");
+
+    emailInput.addEventListener("keyup", () => {
+        checkEmailValidity();
     })
 
     closeBtn.addEventListener("click", () => {
         overlay.style.opacity = 0;
     });
 
-
-    submitBtn.addEventListener("submit", _ => {
+    submitBtn.addEventListener("submit", e => {
+        //  method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"
+        e.preventDefault();
+        console.log("Hei");
         
     });
  
