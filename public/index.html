@@ -19,14 +19,14 @@
 	<div class="popup">
 		<h2>Do you have any feedback</h2>
 		<a class="close-button" href="#">&times;</a>
-		<div class="content">
+		<form class="content" method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail">
             <input type="text" placeholder="Your name">
             <input type="tel" placeholder="Your phone">
             <p>Hello, would you like to share your Email adress with us for some fun time?</p>
             <input type="email" placeholder="myemail@gmail.com" required>
             <textarea cols="30" rows="10" placeholder="Write your message here"></textarea>
 			<input type="submit" disabled>
-		</div>
+		</form>
 	</div>
 </section>
 

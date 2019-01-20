@@ -44,7 +44,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
       return res.status(500);
     } else {
       console.log('Message sent to:', info.envelope.to);
-      res.send({data: "ok"});
+      res.send({data: "success", envelope: info.envelope, options: mailOptions});
       res.status(200).end();
     }
   });

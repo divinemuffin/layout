@@ -1,6 +1,5 @@
 {
   "projects": {
-    "test": "nod-test-38899",
-    "default": "nod-test-38899"
+    "test": "nod-test-38899"
   }
 }
