@@ -66,7 +66,7 @@
         params.push(`serverTime=${new Date()}`)
 
         var http = new XMLHttpRequest();
-        var url = 'https://us-central1-nod-test-38899.cloudfunctions.net/sendMail';
+        var url = '/sendMail';
         http.open('POST', url, true);
 
         //Send the proper header information along with the request
