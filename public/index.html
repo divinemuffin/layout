@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>best site in da world</title>
+    <title>Best site in the world</title>
 
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/slider.css">
@@ -17,16 +17,16 @@
 <body>
 <section class="overlay">
 	<div class="popup">
-		<h2>Do you have any feedback</h2>
+		<h2>Do you have any feedback?</h2>
         <a class="close-button" href="#">&times;</a>
-		<!-- <form class="content" method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"> -->
+        <!-- <form class="content" method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"> -->
         <form class="content">
-            <input type="text" placeholder="Your name">
-            <input type="tel" placeholder="Your phone">
+            <input type="text" class="feedback-name feedback-formfield" placeholder="Your name *" required>
+            <input type="tel" class="feedback-phone feedback-formfield" placeholder="Your phone *" required>
             <p>Hello, would you like to share your Email adress with us for some fun time?</p>
-            <input type="email" placeholder="myemail@gmail.com" required>
-            <textarea cols="30" rows="10" placeholder="Write your message here"></textarea>
-			<input type="submit" disabled>
+            <input type="email" class="feedback-email feedback-formfield" placeholder="Email address *" required>
+            <textarea cols="30" rows="4" class="feedback-message feedback-formfield" placeholder="Write your message here"></textarea>
+			<input type="submit" class="feedback-submit" disabled>
 		</form>
 	</div>
 </section>

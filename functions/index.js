@@ -21,17 +21,20 @@ const mailTransport = nodemailer.createTransport({
   },
 });
 
-exports.sendMail = functions.https.onRequest((req, res) => {
+exports.sendMail = functions.https.onRequest((request, response) => {
+
+  let userEmail = (request.body.email) ? request.body.email : gmailEmail;
+  // mailTransport.auth.user = userEmail;
 
   let template = ``;
 
-  for (let key in req.body) {
-    template += (`<p><b>${key}: </b>${req.body[key]}</p>`)
+  for (let key in request.body) {
+    template += (`<p><b>${key}: </b>${request.body[key]}</p></br>`)
   }
   console.log("Got mail:",template);
 
   const mailOptions = {
-    from: `NOD user <${gmailEmail}>`,
+    from: `NOD user <${userEmail}>`,
     to: `a.moskovchuk@nodeart.io`,
     subject: 'NOD-test feedback',
     html: template
@@ -40,12 +43,12 @@ exports.sendMail = functions.https.onRequest((req, res) => {
   mailTransport.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.error(error.message);
-      res.send(JSON.stringify({error: error.message}));
-      return res.status(500);
+      response.send(JSON.stringify({error: error.message}));
+      return response.status(500);
     } else {
       console.log('Message sent to:', info.envelope.to);
-      res.send({data: "success", envelope: info.envelope, options: mailOptions});
-      res.status(200).end();
+      response.send({data: "ok", envelope: info.envelope, options: mailOptions, body: template});
+      response.status(200).end();
     }
   });
 });

@@ -1,55 +1,94 @@
-// class Popup {
-//     constructor() 
-// };
-
-
 (function() {
 
     // Popup namespace
     let isVisible = true;
 
-    let closeBtn = document.querySelector(".popup > .close-button");
-    let overlay = document.querySelector(".overlay");
+    const emailForm = document.querySelector(".popup .content");
+    const overlay = document.querySelector(".overlay");
 
-    let emailInput = document.querySelector(".popup > .content > input[type='email']");
-    let submitBtn = document.querySelector(".popup > .content > input[type='submit']");
+    const closeBtn = overlay.querySelector(".close-button");
+    const status = overlay.querySelector(".close-button");
 
+    const nameInput = emailForm.querySelector(".feedback-name");
+    const phoneInput = emailForm.querySelector(".feedback-phone");
+    const emailInput = emailForm.querySelector(".feedback-email");
+    const msgInput = emailForm.querySelector(".feedback-message");
 
-    let sendEmail = function() {
-        let url = "https://us-central1-nod-test-38899.cloudfunctions.net/sendMail";
-        let params = new URLSearchParams();
-        let headers = new Headers({'Content-Type':'application/json', 'Access-Controll-Allow-Origin':'*'});
+    const submitBtn = emailForm.querySelector("input[type='submit']");
 
-        params.set("to")
+    let template = ``;
 
-
-    }
-
-    let checkEmailValidity = function() {
-
-        if(!emailInput.checkValidity()) {
+    let checkFormValidity = function() {
+        if(!emailInput.checkValidity() || !nameInput.checkValidity() || !phoneInput.checkValidity()) {
             submitBtn.disabled = true;
-            console.log(emailInput.validationMessage);
         }
         else submitBtn.disabled = false;
     }
 
-    checkEmailValidity(); // initial chaeck just in case
-    console.log("submitBtn");
+    let displayHint = function(refNode) {
+        let node = document.createElement("p");
+        node.innerText = refNode.validationMessage;
+        node.classList = "hint";
+        emailForm.insertBefore(node, refNode);
+    }
+
+    checkFormValidity(); // initial chaeck just in case
 
     emailInput.addEventListener("keyup", () => {
-        checkEmailValidity();
+        checkFormValidity();
+    })
+    nameInput.addEventListener("keyup", () => {
+        checkFormValidity();
+    })
+    phoneInput.addEventListener("keyup", () => {
+        checkFormValidity();
     })
 
     closeBtn.addEventListener("click", () => {
         overlay.style.opacity = 0;
+        overlay.style.visibility = "hidden";
     });
 
-    submitBtn.addEventListener("submit", e => {
-        //  method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"
+
+    emailForm.addEventListener("submit", e => {
         e.preventDefault();
-        console.log("Hei");
-        
-    });
- 
+        submitBtn.value = "[ Sending ... ]";
+
+        let params = [];
+
+
+        for (const key in formInputs={userName:nameInput, phone:phoneInput, email:emailInput, message:msgInput}) {
+            if (formInputs.hasOwnProperty(key)) {
+                params.push(`${key}=${formInputs[key].value}`);
+            }
+        }
+
+        params.push(`serverTime=${new Date()}`)
+
+        var http = new XMLHttpRequest();
+        var url = 'https://us-central1-nod-test-38899.cloudfunctions.net/sendMail';
+        http.open('POST', url, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function() {
+            //Call a function when the state changes.
+            console.log(http.readyState, http);
+            if(http.readyState == 4 && http.status === 200) {
+                alert(http.responseText);
+                submitBtn.className = "feedback-submit sent";
+                submitBtn.value = "[ Sent ]";
+            }
+            else if (http.readyState == 4 && http.status === 0) {
+                submitBtn.className = "feedback-submit warn";
+                submitBtn.value = "[ CORS ]"
+            }
+            else {
+                submitBtn.className = "feedback-submit error";
+                submitBtn.value = "[ Error ]";
+            }
+        }
+        http.send(params.join("&"));
+    });    
 })();
