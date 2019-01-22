@@ -1,0 +1,22 @@
+// Themes
+//
+// Themes can affect any of the primary types. They can
+// override base styles like default link colours. They can change
+// module elements such as colours and borders. They can affect
+// layout with different arrangements. They can also alter how states look.
+
+// Theme rules — оформление. Здесь описываются стили оформлений, которые со 
+// временем, возможно, нужно будет заменить (так удобно делать, например, 
+// новогоднее оформление; для html-тем, выставленных на продажу такие стили 
+// позволяют переключать цветовую гамму и т.п.).
+
+// Theme – категория похожа на State, в нее входят стили, отвечающие за внешний
+// вид макетов и модулей. Эта категория нужна не во всех проектах, но знать про 
+// нее необходимо.
+
+//
+// @source http://smacss.com/book/type-theme
+
+$theme: rebeccapurple;
+
+@import '../styles';

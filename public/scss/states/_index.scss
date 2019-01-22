@@ -1,0 +1,22 @@
+// @source http://smacss.com/book/type-state
+//
+// State Rules
+//
+// A state is something that augments and overrides all other styles.
+// For example, an accordion section may be in a collapsed or expanded state.
+// A message may be in a success or error state.
+//
+// States are generally applied to the same element as a layout rule or
+// applied to the same element as a base module class.
+
+// State – к этой категории относятся стили внешнего вида макета или модулей
+// в определенном состоянии (например, видимый, скрытый, раскрытый или закрытый)
+// или в определенном виде (например, домашняя страница или внутренняя страница).
+
+// State rules — стили состояния. В этом разделе прописываются различные состояния
+// модулей и скелета сайта. Это единственный раздел, в котором допустимо использование 
+// ключевого слова «!important».
+
+// ==========================================================================
+// $States
+// ==========================================================================

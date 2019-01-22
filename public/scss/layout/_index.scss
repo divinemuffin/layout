@@ -1,0 +1,18 @@
+// @source http://smacss.com/book/type-layout
+//
+// Layout Rules     (SMACSS)
+//
+// Layout styles can also be divided into major and minor styles based on
+// reuse. Major layout styles such as header and footer are traditionally
+// styled using ID selectors but take the time to think about the elements
+// that are common across all components of the page and use class selectors
+// where appropriate.
+
+// Layout – категория для стилей, с помощью которых страница разделяется на секции.
+
+// Layout rules — стили макета. Здесь находятся стили глобальных элементов 
+// размеры шапки, футера, сайдбара и т.п. Джонатан предлагает использовать 
+// здесь id в селекторах, так как эти элементы не будут встречаться более 1 
+// раза на странице. Однако автор статьи считает это плохой практикой (каждый 
+// раз, когда в стилях появляется id селектор, где-то в мире грустит котенок). 
+// Используйте классы и будет вам счастье.

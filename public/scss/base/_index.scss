@@ -1,0 +1,24 @@
+// @source http://smacss.com/book/type-base
+//
+// Base Rules   (SMACSS)
+//
+// A Base rule is applied to an element using an element selector, a
+// descendent selector, or a child selector, along with any pseudo-classes.
+// It doesn’t include any class or ID selectors. It is defining the default
+// styling for how that element should look in all occurrences on the page.
+
+// Base – в эту категорию входят правила, которые определяют внешний вид 
+// элементов по умолчанию. Одиночные селекторы элементов, селекторы атрибутов,
+// селекторы псевдоклассов, смежные селекторы и т.д. Например, html, body, a, 
+// a:hover и т.д.
+
+// Base rules — базовые стили. Это стили основных элементов сайта — body, input, 
+// button, ul, ol и т.п. В этой секции используются в основном селекторы тэгов и 
+// атрибутов, классы — в исключительных случаях (например, если у вас стилизованные 
+// JavaScript-ом селекты);
+
+// ==========================================================================
+// $Base
+// ==========================================================================
+@import 'base';
+
