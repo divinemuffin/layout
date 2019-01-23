@@ -6,7 +6,7 @@
 //
 // $base-font-size - {number}
 
-$base-font-size:              16;
+$base-font-size: 14px;
 
 // $base-line-height
 //
@@ -14,7 +14,7 @@ $base-font-size:              16;
 //
 // $base-line-height - {number}
 
-$base-line-height:            24;
+$base-line-height: 22px;
 
 // Font Stacks
 
@@ -75,7 +75,7 @@ $font-family-monospace:       'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Ver
 //
 // $font-family-display - {list}
 
-$font-family-display:         $font-family-sans;
+$font-family-display:         $font-family-sans-custom;
 
 // $font-family-default
 //
@@ -85,3 +85,5 @@ $font-family-display:         $font-family-sans;
 // @requires - `$font-family-sans`
 
 $font-family-default:         $font-family-sans-custom;
+$font-size-default:           $base-font-size;
+$line-height-default:         $base-line-height;

@@ -1,0 +1,33 @@
+{
+  "name": "nod-test",
+  "version": "1.0.0",
+  "description": "Test project including webpack, sass and travis. Built on top of the Firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "git repository: (https://github.com/divinemuffin/layout.git)",
+    "build": "webpack --config prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divinemuffin/layout.git"
+  },
+  "keywords": [
+    "layout",
+    "test",
+    "firebase",
+    "scss",
+    "webpack"
+  ],
+  "author": "divinemuffin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divinemuffin/layout/issues"
+  },
+  "homepage": "https://github.com/divinemuffin/layout#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
+}

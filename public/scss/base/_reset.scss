@@ -1,0 +1,13 @@
+
+@viewport { width: device-width; }
+
+html {
+  background-color: $nod-bg-primary;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  &:before,
+  &:after { box-sizing: inherit; }
+}

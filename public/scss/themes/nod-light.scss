@@ -17,6 +17,15 @@
 //
 // @source http://smacss.com/book/type-theme
 
-$theme: rebeccapurple;
+$nod-bg-primary: $ghostwhite;
+$nod-bg-primary-shade1: $ashy;
+$nod-bg-primary-shade2: $gunpowder;
 
-// @import '../styles';
+$nod-text-primary: $asfalt;         // on white
+$nod-text-primary-shade1: $coal;
+$nod-text-secondary: $iron;         // on black
+
+$radius-small: 4px;
+$border-thin: 1px solid $nod-bg-primary-shade2;
+
+// @import '../nod-light';

@@ -6,33 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Best site in the world</title>
 
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/slider.css">
-    <link rel="stylesheet" href="./styles/menu.css">
-    <link rel="stylesheet" href="./styles/popup.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 
     <script src="./js/slider.js" defer></script>
     <script src="./js/popup.js" defer></script>
 </head>
 <body>
-<section class="overlay">
-	<div class="popup">
-		<h2>Do you have any feedback?</h2>
-        <a class="close-button" href="#">&times;</a>
-        <!-- <form class="content" method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"> -->
-        <form class="content">
-            <input type="text" class="feedback-name feedback-formfield" placeholder="Your name *" required>
-            <input type="tel" class="feedback-phone feedback-formfield" placeholder="Your phone *" required>
-            <p>Hello, would you like to share your Email adress with us for some fun time?</p>
-            <input type="email" class="feedback-email feedback-formfield" placeholder="Email address *" required>
-            <textarea cols="30" rows="4" class="feedback-message feedback-formfield" placeholder="Write your message here"></textarea>
-			<input type="submit" class="feedback-submit" disabled>
-		</form>
-	</div>
-</section>
+    <section class="l-popup">
+        <div class="overlay">
+            <div class="popup">
+                <h2>Do you have any feedback?</h2>
+                <a class="close-button" href="#">&times;</a>
+                <!-- <form class="content" method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"> -->
+                <form class="content">
+                    <input type="text" class="feedback-name feedback-formfield" placeholder="Your name *" required>
+                    <input type="tel" class="feedback-phone feedback-formfield" placeholder="Your phone *" required>
+                    <p>Hello, would you like to share your Email adress with us for some fun time?</p>
+                    <input type="email" class="feedback-email feedback-formfield" placeholder="Email address *" required>
+                    <textarea cols="30" rows="4" class="feedback-message feedback-formfield" placeholder="Write your message here"></textarea>
+                    <input type="submit" class="feedback-submit" disabled>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- HEADER -->
-    <header>
+    <header class="l-header">
         <section class="wrap980" role="banner">
             <div class="logo">
                 <div class="image"></div>
@@ -58,7 +57,7 @@
         </section>
     </header>
     <!-- SLIDER -->
-    <section class="slider-wrap">
+    <section class="slider-wrap l-slider">
         <ul id="slides">
             <li class="slide showing"></li>
             <li class="slide"></li>
@@ -70,7 +69,7 @@
         </div>
     </section>
     <!-- CONTENT -->
-    <main role="main">
+    <main role="main" class="l-main">
         <div class="routing">
             <div class="wrap980">
                 <p><a href="#">Главная</a> / <a href="#">Каталог</a> / <a href="#">Бытовая техника</a></p>
@@ -166,7 +165,7 @@
             </section>
         </section>
     </main>
-    <section class="footer">
+    <section class="footer l-footer">
         <section class="footer-wrap wrap980">
             <div class="col copyright">
                 <p>© 2012–2013 ЗАО «Компания»</p>

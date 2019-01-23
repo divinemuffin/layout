@@ -3,6 +3,7 @@ node_js:
   - "8.11.1"
 script:
   - npm run build
+  - npm run watch-css
 install:
   - npm install
   - npm install -g firebase-tools
