@@ -11,3 +11,25 @@ html {
   &:before,
   &:after { box-sizing: inherit; }
 }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-display;
+  font-weight: normal;
+  margin: 0px auto;
+}
+
+p {
+  font-family: $font-family-display;
+  font-weight: normal;
+  margin: 0px auto;
+}
+
+ul {
+  padding: 0px;
+}

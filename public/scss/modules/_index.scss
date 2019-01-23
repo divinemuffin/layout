@@ -23,9 +23,44 @@
 
 
 // General Modules
-.wrap980 {
+
+%container {
+    display: block;
+}
+%container-inline {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+%container-list > * {
+    display: list-item;
+}
+%container-flex-justify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%container-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-980 {
+    @extend %container-flex-justify;
     max-width: 980px;
     margin: 0 auto;
 }
 
-// Layout Modules
+.menu {
+    @extend %container-flex-center;
+    list-style: none;
+    font-size: 160%;
+    padding: 2.5vw;
+}
+
+// Layout Modules with Elements
+
+@import 'header';

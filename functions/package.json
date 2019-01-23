@@ -6,9 +6,7 @@
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log",
-    "watch-css": "node-sass -w -r ../public/scss/ -o ../public/styles/",
-    "rebuild-sass": "npm rebuild node-sass"
+    "logs": "firebase functions:log"
   },
   "dependencies": {
     "firebase-admin": "~5.13.0",

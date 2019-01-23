@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "git repository: (https://github.com/divinemuffin/layout.git)",
-    "build": "webpack --config prod.config.js"
+    "build": "webpack --config prod.config.js",
+    "scss": "node-sass -w -r public/scss/ -o public/styles/",
+    "rebuild-sass": "npm rebuild node-sass"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,9 @@
     "url": "https://github.com/divinemuffin/layout/issues"
   },
   "homepage": "https://github.com/divinemuffin/layout#readme",
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  },
   "devDependencies": {
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",

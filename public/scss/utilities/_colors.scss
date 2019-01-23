@@ -2,12 +2,16 @@
 // examples based on the official Sass styleguide
 
 // Nod-colors
-$ghostwhite: #f8f8ff;
-$iron: #dadbdf;
-$ashy: #dcdcdc;
-$gunpowder: #777777;
-$asfalt: #444444;
-$coal: #333;
+$ghostwhite:    #f8f8ff;
+$resin:         #e0ac1c;
+$iron:          #dadbdf;
+$ashy:          #dcdcdc;
+$gunpowder:     #777777;
+$jako:          #585858;
+$asfalt:        #444444;
+$moonrock:      #333333;
+$storm:         #2a2f3a;
+$coal:          #1f1f1f;
 
 // descriptive colors
 // =============
@@ -45,10 +49,10 @@ $color-text-heading:        $regent-grey;
 $color-text-invert:         rgba($color-background, .75);
 $color-text-strong-invert:  $color-background;
 
-// Links
-$color-link:                $color-primary;
-$color-link-hover:          $midnight-blue;
-$color-link-visited:        $bouquet;
+// // Links
+// $color-link:                $color-primary;
+// $color-link-hover:          $midnight-blue;
+// $color-link-visited:        $bouquet;
 
 // Code
 $color-code:                #333;

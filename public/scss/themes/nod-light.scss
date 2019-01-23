@@ -22,8 +22,15 @@ $nod-bg-primary-shade1: $ashy;
 $nod-bg-primary-shade2: $gunpowder;
 
 $nod-text-primary: $asfalt;         // on white
-$nod-text-primary-shade1: $coal;
+$nod-text-primary-shade1: $moonrock;
+$nod-text-primary-shade2: $coal;
 $nod-text-secondary: $iron;         // on black
+
+
+// Links
+$color-link:                $nod-text-primary-shade1;
+$color-link-hover:          $nod-text-primary-shade2;
+$color-link-visited:        $bouquet;
 
 $radius-small: 4px;
 $border-thin: 1px solid $nod-bg-primary-shade2;

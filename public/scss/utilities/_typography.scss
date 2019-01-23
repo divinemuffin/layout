@@ -52,6 +52,7 @@ $font-family-sans-fallback:   'Arial', sans-serif;
 
 $font-family-sans:            'Helvetica Neue', 'Helvetica', $font-family-sans-fallback;
 $font-family-sans-custom:     'Sans Reg', 'Lucida Sans Regular', sans-serif, $font-family-sans-fallback;
+$font-family-sans-custom-thin:     'Sans Thin','Lucida Sans Regular', sans-serif, $font-family-sans-fallback;
 
 // $font-family-serif
 //
@@ -85,5 +86,6 @@ $font-family-display:         $font-family-sans-custom;
 // @requires - `$font-family-sans`
 
 $font-family-default:         $font-family-sans-custom;
+$font-family-thin:            $font-family-sans-custom-thin;
 $font-size-default:           $base-font-size;
 $line-height-default:         $base-line-height;
