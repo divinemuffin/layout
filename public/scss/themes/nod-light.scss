@@ -21,19 +21,20 @@ $nod-bg-primary: $white;
 $nod-bg-primary-shade1: $melancholic;
 $nod-bg-primary-shade2: $gunpowder;
 
-
-$nod-text-primary: $asfalt;         // on white
+$nod-text-primary: $asfalt;                 // on white
 $nod-text-primary-shade1: $moonrock;
 $nod-text-primary-shade2: $coal;
 
-$nod-text-light: $ghostwhite;
-$nod-text-light-shade1: $iron;         // on black
+$nod-text-light: $ghostwhite;               // on black
+$nod-text-light-shade1: $iron;
 $nod-text-light-shade2: $ashy;
 
 
 // Links
-$color-link:                $nod-text-primary-shade1;
-$color-link-hover:          $nod-text-primary-shade2;
+$color-link:                $nod-text-light-shade2;
+$color-link-dark:           $nod-text-primary-shade1;
+
+$color-link-hover:          $nod-text-primary;
 $color-link-visited:        $bouquet;
 
 $radius-small: 4px;
@@ -41,21 +42,37 @@ $border-thin: 1px solid $nod-bg-primary-shade2;
 
 
 // White Space
-$pad-small: 10px;
-$pad-small-x: 0px $pad-small;
-$pad-small-y: $pad-small 0px;
+$whitespace-xs: 5px;
+$whitespace-s:  10px;
+$whitespace-m:  15px;
+$whitespace-l:  20px;
+$whitespace-xl: 25px;
 
-$mar-small: 10px;
-$mar-small-x: 0px $pad-small;
-$mar-small-y: $pad-small 0px;
 
-$pad-med: 20px;
-$pad-med-x: 0px $pad-med;
-$pad-med-y: $pad-med 0px;
+$pad-xsmall: $whitespace-xs;
+$pad-xsmall-x: 0px $whitespace-xs;
+$pad-xsmall-y: $whitespace-xs 0px;
 
-$mar-med: 20px;
-$mar-med-x: 0px $pad-med;
-$mar-med-y: $pad-med 0px;
+$pad-small: $whitespace-s;
+$pad-small-x: 0px $whitespace-s;
+$pad-small-y: $whitespace-s 0px;
+
+$pad-med: $whitespace-m;
+$pad-med-x: 0px $whitespace-m;
+$pad-med-y: $whitespace-m 0px;
+
+
+$mar-xsmall: $whitespace-xs;
+$mar-xsmall-x: 0px $whitespace-xs;
+$mar-xsmall-y: $whitespace-xs 0px;
+
+$mar-small: $whitespace-s;
+$mar-small-x: 0px $whitespace-s;
+$mar-small-y: $whitespace-s 0px;
+
+$mar-med: $whitespace-m;
+$mar-med-x: 0px $whitespace-m;
+$mar-med-y: $whitespace-m 0px;
 
 
 // @import '../nod-light';

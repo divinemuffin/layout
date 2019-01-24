@@ -14,11 +14,12 @@ body {
 
 a {
   background: transparent;
-  color: #333333;
+  color: #9d9d9d;
   text-decoration: none;
   transition: color .2s; }
 
 a:hover {
+  color: #444444;
   text-decoration: underline; }
 
 img {
@@ -44,7 +45,7 @@ hr {
   background: #dadbdf;
   border-radius: 20%;
   height: 0px;
-  margin: 20px 0px; }
+  margin: 15px 0px; }
 
 @viewport {
   width: device-width; }
@@ -84,7 +85,7 @@ ul {
   position: relative; }
 
 .l-main {
-  padding: 10px;
+  padding: 5px;
   background: #fff; }
 
 .l-footer {
@@ -117,10 +118,82 @@ ul {
 .container-980 {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0px 10px; }
+  padding: 0px 5px; }
 
 .menu {
   list-style: none; }
+
+.l-popup .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms, visibility 500ms;
+  visibility: visible;
+  z-index: 999; }
+  .l-popup .overlay:target {
+    visibility: hidden;
+    opacity: 1; }
+  .l-popup .overlay .popup {
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    max-height: 90%;
+    top: 5%;
+    position: relative;
+    /* transition: all 2s ease-in-out; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 1; }
+    .l-popup .overlay .popup .header {
+      margin-top: 0;
+      color: #333333;
+      font-family: Tahoma, Arial, sans-serif; }
+    .l-popup .overlay .popup .close-button {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333333; }
+    .l-popup .overlay .popup .close-button:hover {
+      color: #75ff81; }
+    .l-popup .overlay .popup .content {
+      overflow: auto; }
+      .l-popup .overlay .popup .content .text {
+        color: #333333;
+        width: 90%;
+        text-align: justify;
+        margin: 10px auto; }
+      .l-popup .overlay .popup .content .feedback-formfield,
+      .l-popup .overlay .popup .content .feedback-submit {
+        margin: 10px;
+        width: 90%;
+        padding: 5px; }
+      .l-popup .overlay .popup .content .feedback-formfield:focus {
+        outline: none; }
+      .l-popup .overlay .popup .content .feedback-submit.sent {
+        color: #444444;
+        background: #75ff81;
+        border: 1px solid #444444; }
+      .l-popup .overlay .popup .content .feedback-submit.warn {
+        color: #444444;
+        background: #f6ff75;
+        border: 1px solid #444444; }
+      .l-popup .overlay .popup .content .feedback-submit.error {
+        color: #444444;
+        background: #ff7575;
+        border: 1px solid #444444; }
+      .l-popup .overlay .popup .content .feedback-submit:disabled {
+        color: #fff;
+        background: #dcdcdc;
+        border: 1px solid #fff; }
 
 .l-header .upper-header {
   min-height: 175px; }
@@ -131,6 +204,8 @@ ul {
     margin: 10px; }
   .l-header .upper-header .contacts {
     font-family: "Sans Thin", "Lucida Sans Regular", sans-serif, "Arial", sans-serif; }
+    .l-header .upper-header .contacts .link {
+      color: #333333; }
 
 .l-header .lower-header,
 .l-header .lower-header .menu-item .link {
@@ -176,51 +251,54 @@ ul {
 
 .l-main .leftblock {
   min-width: 20%;
-  padding: 10px; }
+  padding: 5px; }
   .l-main .leftblock .sidemenu {
     list-style: none; }
     .l-main .leftblock .sidemenu .menu-item {
       position: relative;
-      margin: 10px 0px; }
+      margin: 5px 0px; }
     .l-main .leftblock .sidemenu .submenu {
       display: none;
       width: 100%;
       margin-left: 10%;
       padding: 0; }
       .l-main .leftblock .sidemenu .submenu .menu-subitem {
-        margin: 10px 0px; }
+        margin: 5px 0px; }
     .l-main .leftblock .sidemenu > .menu-item:hover > .submenu {
       display: block; }
   .l-main .leftblock .pricelist {
     text-align: center;
     margin-top: 80px; }
+    .l-main .leftblock .pricelist .link {
+      color: #333333; }
 
 .l-main .rightblock {
-  margin: 0px 10px;
-  padding: 10px; }
+  margin: 0px 5px;
+  padding: 5px; }
   .l-main .rightblock .cards .card {
     max-width: 200px;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     background: #dcdcdc;
     color: #9d9d9d; }
     .l-main .rightblock .cards .card .card-actions {
-      margin: 10px 0px; }
+      margin: 5px 0px;
+      color: #444444; }
   .l-main .rightblock .navigation {
     list-style: none;
-    margin: 10px 0px;
+    margin: 5px 0px;
     margin-bottom: 40px; }
     .l-main .rightblock .navigation .nav-item {
-      padding: 0px 10px; }
+      padding: 0px 5px; }
   .l-main .rightblock .about .col {
     width: 48%; }
 
 .l-footer .footer-wrap {
-  padding: 10px; }
+  padding: 5px; }
   .l-footer .footer-wrap .col, .l-footer .footer-wrap .col a {
     color: #dadbdf; }
   .l-footer .footer-wrap .col.company-link .logo {
-    margin: 10px;
+    margin: 5px;
     line-height: 0; }
 
 @media print {

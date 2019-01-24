@@ -1,12 +1,12 @@
 .l-main {
     .leftblock {
         min-width: 20%;
-        padding: $pad-small;
+        padding: $pad-xsmall;
         .sidemenu {
             list-style: none;
             .menu-item {
                 position: relative;
-                margin: $mar-small-y;
+                margin: $mar-xsmall-y;
             }
             .submenu {
                 display: none;
@@ -14,7 +14,7 @@
                 margin-left: 10%;
                 padding: 0;
                 .menu-subitem {
-                    margin: $mar-small-y;
+                    margin: $mar-xsmall-y;
                 }
             }
             & > .menu-item:hover > .submenu {
@@ -24,33 +24,37 @@
         .pricelist {
             text-align: center;
             margin-top: 80px;
+            .link {
+                color: $color-link-dark;
+            }
         }
     }
     .rightblock {
-        margin: $mar-small-x;
-        padding: $pad-small;
+        margin: $mar-xsmall-x;
+        padding: $pad-xsmall;
         .cards {
             @extend %flex-start;
             .card {
                 max-width: 200px;
                 padding: $pad-small;
-                margin: $mar-small;
+                margin: $mar-xsmall;
                 background: $nod-bg-primary-shade1;
                 color: $nod-text-light-shade2;
                 
                 .card-actions {
                     @extend %flex-justify;
-                    margin: $mar-small-y;
+                    margin: $mar-xsmall-y;
+                    color: $nod-text-primary;
                 }
             }
         }
         .navigation {
             @extend %flex-center;
             list-style: none;
-            margin: $mar-small-y;
+            margin: $mar-xsmall-y;
             margin-bottom: 40px;
             .nav-item {
-                padding: $pad-small-x;
+                padding: $pad-xsmall-x;
             }
         }
         .about {

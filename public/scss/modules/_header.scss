@@ -16,6 +16,9 @@
         }
         .contacts {
             font-family: $font-family-thin;
+            .link {
+                color: $color-link-dark;
+            }
         }
     }
     .lower-header, 
