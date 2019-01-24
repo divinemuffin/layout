@@ -79,7 +79,7 @@ ul {
 .l-header {
   width: 100%;
   background: #dcdcdc;
-  color: #333333; }
+  color: #777777; }
 
 .l-slider {
   position: relative; }
@@ -200,16 +200,17 @@ ul {
   .l-header .upper-header .logo .image {
     height: 60px;
     width: 60px;
-    background: #444444;
+    background: #777777;
     margin: 10px; }
   .l-header .upper-header .contacts {
     font-family: "Sans Thin", "Lucida Sans Regular", sans-serif, "Arial", sans-serif; }
     .l-header .upper-header .contacts .link {
-      color: #333333; }
+      color: #777777;
+      font-weight: bold; }
 
 .l-header .lower-header,
 .l-header .lower-header .menu-item .link {
-  background: #444444;
+  background: #777777;
   color: #dadbdf; }
 
 .l-header .lower-header .menu {
