@@ -35,33 +35,41 @@
 %container-list > * {
     display: list-item;
 }
-%container-flex-justify {
+%container-flex {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
-%container-flex-center {
-    display: flex;
-    justify-content: center;
+%flex-justify {
+    @extend %container-flex;
+    justify-content: space-between;
+}
+%flex-justify-align {
+    @extend %container-flex;
+    @extend %flex-justify;
     align-items: center;
     flex-wrap: wrap;
 }
-
+%flex-center {
+    @extend %container-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+%flex-start {
+    @extend %container-flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
 .container-980 {
-    @extend %container-flex-justify;
+    @extend %flex-justify;
     max-width: 980px;
     margin: 0 auto;
+    padding: $pad-small-x;
 }
-
 .menu {
-    @extend %container-flex-center;
     list-style: none;
-    font-size: 160%;
-    padding: 2.5vw;
 }
 
 // Layout Modules with Elements
 
 @import 'header';
 @import 'slider';
+@import 'main';

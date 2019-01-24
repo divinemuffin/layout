@@ -7,28 +7,29 @@ $time_per_slide: 8;
 // total time needed for full animation
 $total_animation_time: $time_per_slide * $slides;
 
-.slider-wrap {
-    height: 462px;
-    overflow:hidden;
-    position:relative;
-}
-.photo {
-    position:absolute;
-    animation:round #{$total_animation_time}s infinite;
-    opacity:0;
-}
-@keyframes round{   
-    25%{
-        opacity:1;
+.l-slider {
+    .slider-wrap {
+        height: 462px;
+        overflow:hidden;
+        position:relative;
     }
-    40%{
+    .photo {
+        position:absolute;
+        animation:round #{$total_animation_time}s infinite;
         opacity:0;
     }
-} 
+    @keyframes round{   
+        25%{
+            opacity:1;
+        }
+        40%{
+            opacity:0;
+        }
+    } 
 
-@for $index from 1 to $slides + 1{
-    img:nth-child(#{$index}){
-        animation-delay:#{$total_animation_time - $time_per_slide * $index}s
+    @for $index from 1 to $slides + 1{
+        .slider-wrap .photo:nth-child(#{$index}){
+            animation-delay:#{$total_animation_time - $time_per_slide * $index}s
+        }
     }
 }
-   

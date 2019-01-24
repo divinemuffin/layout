@@ -1,7 +1,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: $color-text;
+  color: $nod-text-light;
   min-height: 100%;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -42,4 +42,12 @@ input, textarea {
 textarea { 
   max-width: 100%;
   min-height: $line-height-default;
+}
+
+hr {
+  border: 1px solid $nod-text-secondary;
+  background: $nod-text-secondary;
+  border-radius: 20%;
+  height: 0px;
+  margin: $mar-med-y;
 }

@@ -1,0 +1,64 @@
+.l-main {
+    .leftblock {
+        min-width: 20%;
+        padding: $pad-small;
+        .sidemenu {
+            list-style: none;
+            .menu-item {
+                position: relative;
+                margin: $mar-small-y;
+            }
+            .submenu {
+                display: none;
+                width: 100%;
+                margin-left: 10%;
+                padding: 0;
+                .menu-subitem {
+                    margin: $mar-small-y;
+                }
+            }
+            & > .menu-item:hover > .submenu {
+                display: block;
+            }
+        }
+        .pricelist {
+            text-align: center;
+            margin-top: 80px;
+        }
+    }
+    .rightblock {
+        margin: $mar-small-x;
+        padding: $pad-small;
+        .cards {
+            @extend %flex-start;
+            .card {
+                max-width: 200px;
+                padding: $pad-small;
+                margin: $mar-small;
+                background: $nod-bg-primary-shade1;
+                color: $nod-text-light-shade1;
+                
+                .card-actions {
+                    @extend %flex-justify;
+                    margin: $mar-small-y;
+                }
+            }
+        }
+        .navigation {
+            @extend %flex-center;
+            list-style: none;
+            margin: $mar-small-y;
+            margin-bottom: 40px;
+            .nav-item {
+                padding: $pad-small-x;
+            }
+        }
+        .about {
+            @extend %flex-justify;
+            .col {
+                width: 48%;
+            }
+        }
+    }
+    
+}

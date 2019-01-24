@@ -18,9 +18,11 @@
 // @source http://smacss.com/book/type-theme
 
 $nod-bg-primary: $ghostwhite;
-$nod-bg-primary-shade1: $ashy;
+$nod-bg-primary-shade1: $melancholic;
 $nod-bg-primary-shade2: $gunpowder;
 
+$nod-text-light: $ashy;
+$nod-text-light-shade1: $gunpowder;
 $nod-text-primary: $asfalt;         // on white
 $nod-text-primary-shade1: $moonrock;
 $nod-text-primary-shade2: $coal;
@@ -34,5 +36,24 @@ $color-link-visited:        $bouquet;
 
 $radius-small: 4px;
 $border-thin: 1px solid $nod-bg-primary-shade2;
+
+
+// White Space
+$pad-small: 10px;
+$pad-small-x: 0px $pad-small;
+$pad-small-y: $pad-small 0px;
+
+$mar-small: 10px;
+$mar-small-x: 0px $pad-small;
+$mar-small-y: $pad-small 0px;
+
+$pad-med: 20px;
+$pad-med-x: 0px $pad-med;
+$pad-med-y: $pad-med 0px;
+
+$mar-med: 20px;
+$mar-med-x: 0px $pad-med;
+$mar-med-y: $pad-med 0px;
+
 
 // @import '../nod-light';

@@ -1,51 +1,63 @@
-// Header Elements
+.l-header {
+    // Header Elements
 
-.upper-header {
-    min-height: 125px;
-}
+    .upper-header {
+        @extend %flex-justify-align;
+        min-height: 175px;
+    
+        .logo {
+            @extend %container-inline;
+        }
+        .logo .image {
+            height: 60px;
+            width: 60px;
+            background: $nod-text-primary;
+            margin: 10px;
+        }
+        .contacts {
+            font-family: $font-family-thin;
+        }
+    }
+    .lower-header, 
+    .lower-header .menu-item .link {
+        background: $nod-text-primary;
+        color: $nod-text-secondary;
+    }
+    .lower-header {
+        .menu {
+            @extend %flex-center;
+            font-size: 160%;
+            padding: 2.5vw;
+            line-height: 30px;
+        }
+        .menu .menu-item:not(:first-child):before {
+            content: "|";
+            padding: 0px 10px;
+            text-align: center;
+        }
+    }
+    
 
-.upper-header .logo {
-    @extend %container-inline;
-}
-.upper-header .logo .image {
-    height: 60px;
-    width: 60px;
-    background: $nod-text-primary;
-    margin: 10px;
-}
-.upper-header .contacts {
-    font-family: $font-family-thin;
-}
-.lower-header, 
-.lower-header .menu-item .link {
-    background: $nod-text-primary;
-    color: $nod-text-secondary;
-}
-.menu .menu-item:not(:first-child):before {
-    content: "|";
-    padding: 0px 10px;
-    text-align: center;
-}
+    // header section {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     padding: 0px 10px;
+    // }
 
-// header section {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 0px 10px;
-// }
-
-// .menu-wrap {
-//     background: var(--gray);
-// }
+    // .menu-wrap {
+    //     background: var(--gray);
+    // }
 
 
-// .menu-wrap .menu .menu-item {
-//     margin: 5px;
-// }
-// .menu-wrap .menu .menu-item:not(:first-child):before {
-//     content: " | ";
-//     padding-right: 5px;
-// }
-// .menu-wrap .menu .menu-item a {
-//     color:var(--pure_white);
-// }
+    // .menu-wrap .menu .menu-item {
+    //     margin: 5px;
+    // }
+    // .menu-wrap .menu .menu-item:not(:first-child):before {
+    //     content: " | ";
+    //     padding-right: 5px;
+    // }
+    // .menu-wrap .menu .menu-item a {
+    //     color:var(--pure_white);
+    // }
+}
