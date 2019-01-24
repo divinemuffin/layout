@@ -17,16 +17,18 @@
 //
 // @source http://smacss.com/book/type-theme
 
-$nod-bg-primary: $ghostwhite;
+$nod-bg-primary: $white;
 $nod-bg-primary-shade1: $melancholic;
 $nod-bg-primary-shade2: $gunpowder;
 
-$nod-text-light: $ashy;
-$nod-text-light-shade1: $gunpowder;
+
 $nod-text-primary: $asfalt;         // on white
 $nod-text-primary-shade1: $moonrock;
 $nod-text-primary-shade2: $coal;
-$nod-text-secondary: $iron;         // on black
+
+$nod-text-light: $ghostwhite;
+$nod-text-light-shade1: $iron;         // on black
+$nod-text-light-shade2: $ashy;
 
 
 // Links

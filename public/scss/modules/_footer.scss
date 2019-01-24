@@ -1,0 +1,17 @@
+.l-footer {
+    .footer-wrap {
+        @extend %flex-justify-align;
+        padding: $pad-small;
+        .col, .col a {
+            color: $nod-text-light-shade1;
+        }
+
+        .col.company-link {
+            @extend %container-inline;
+            .logo {
+                margin: $mar-small;
+                line-height: 0;
+            }
+        }
+    }
+}

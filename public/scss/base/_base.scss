@@ -1,7 +1,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: $nod-text-light;
+  color: $nod-text-light-shade2;
   min-height: 100%;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -21,9 +21,11 @@ a {
   text-decoration: none;
   transition: color .2s;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 img {
-  height: auto;
   max-width: 100%;
 }
 
@@ -45,8 +47,8 @@ textarea {
 }
 
 hr {
-  border: 1px solid $nod-text-secondary;
-  background: $nod-text-secondary;
+  border: 1px solid $nod-text-light-shade1;
+  background: $nod-text-light-shade1;
   border-radius: 20%;
   height: 0px;
   margin: $mar-med-y;
