@@ -1,20 +1,15 @@
 (function() {
-
     // Popup namespace
-    let isVisible = true;
-
     const overlay = document.querySelector(".overlay");
-    const emailForm = document.querySelector(".popup .content");
+    const feedbackForm = overlay.querySelector(".content");
 
     const closeBtn = overlay.querySelector(".close-button");
 
-    const nameInput = emailForm.querySelector(".input-name");
-    const phoneInput = emailForm.querySelector(".input-phone");
-    const emailInput = emailForm.querySelector(".input-email");
-    const msgInput = emailForm.querySelector(".input-message");
-    const submitBtn = emailForm.querySelector("input-submit");
-
-    let template = ``;
+    const nameInput = feedbackForm.querySelector(".input-name");
+    const phoneInput = feedbackForm.querySelector(".input-phone");
+    const emailInput = feedbackForm.querySelector(".input-email");
+    const msgInput = feedbackForm.querySelector(".input-textarea");
+    const submitBtn = feedbackForm.querySelector(".input-submit");
 
     let checkFormValidity = function() {
         if(!emailInput.checkValidity() || !nameInput.checkValidity() || !phoneInput.checkValidity()) {
@@ -27,7 +22,7 @@
         let node = document.createElement("p");
         node.innerText = refNode.validationMessage;
         node.classList = "hint";
-        emailForm.insertBefore(node, refNode);
+        feedbackForm.insertBefore(node, refNode);
     }
 
     checkFormValidity(); // initial chaeck just in case
@@ -64,7 +59,7 @@
     };
 
 
-    emailForm.addEventListener("submit", e => {
+    feedbackForm.addEventListener("submit", e => {
         e.preventDefault();
         submitBtn.value = "[ Sending ... ]";
 
@@ -73,6 +68,7 @@
 
         for (const key in formInputs={userName:nameInput, phone:phoneInput, email:emailInput, message:msgInput}) {
             if (formInputs.hasOwnProperty(key)) {
+                console.log(`${key}=${formInputs[key].value}`);
                 params.push(`${key}=${formInputs[key].value}`);
             }
         }
@@ -91,15 +87,15 @@
             console.log(http.readyState, http);
             if(http.readyState == 4 && http.status === 200) {
                 alert(http.responseText);
-                submitBtn.className = "feedback-submit sent";
+                submitBtn.className = "input input-submit sent";
                 submitBtn.value = "[ Sent ]";
             }
             else if (http.readyState == 4 && http.status === 0) {
-                submitBtn.className = "feedback-submit warn";
+                submitBtn.className = "input input-submit warn";
                 submitBtn.value = "[ CORS ]"
             }
             else {
-                submitBtn.className = "feedback-submit error";
+                submitBtn.className = "input input-submit error";
                 submitBtn.value = "[ Error ]";
             }
         }
