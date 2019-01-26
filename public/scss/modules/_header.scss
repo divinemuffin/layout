@@ -24,6 +24,7 @@
     .menu-big {
         @extend %container-flex;
         justify-content: center;
+        color: $nod-text-light-shade1;
     }
     .menu-big .menu-item:not(:first-child):before {
         content: "|";

@@ -1,0 +1,38 @@
+.content {
+    overflow: auto;
+    .text {
+        color: $nod-text-primary-shade1;
+        width: 90%;
+        text-align: justify;
+        margin: 10px auto;
+    }
+    .input {
+        margin: $mar-small;
+        width: 90%;
+        padding: $pad-xsmall;
+    }
+    .input:focus {
+        outline: none;
+    }
+}
+
+.input-submit.sent {
+    color: $nod-text-primary;
+    background: $good;
+    border: 1px solid $nod-text-primary;
+}
+.input-submit.warn {
+    color: $nod-text-primary;
+    background: $warn;
+    border: 1px solid $nod-text-primary;
+}
+.input-submit.error {
+    color: $nod-text-primary;
+    background: $bad;
+    border: 1px solid $nod-text-primary;
+}
+.input-submit:disabled {
+    color: $white;
+    background: $nod-bg-primary-shade1;
+    border: 1px solid $white;
+}

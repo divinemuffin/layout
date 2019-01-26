@@ -1,0 +1,44 @@
+.overlay {
+    position: fixed;
+    background: $transparent-black7;
+    transition: opacity 500ms, visibility 500ms;
+    visibility: visible;
+    z-index: 999;
+    &:target {
+        visibility: hidden;
+        opacity: 1;
+    }
+}
+
+.popup {
+    margin: auto;
+    padding: 20px;
+    background: $white;
+    border-radius: 5px;
+    width: 30%;
+    max-height: 90%;
+    top: 5%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 1;
+
+    .header {
+        margin-top: 0;
+        color: $nod-text-primary-shade1;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    .close-button {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $nod-text-primary-shade1;
+        &:hover {
+            color: $good;
+        }
+    }
+}

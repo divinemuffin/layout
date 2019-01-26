@@ -3,18 +3,16 @@
     // Popup namespace
     let isVisible = true;
 
-    const emailForm = document.querySelector(".popup .content");
     const overlay = document.querySelector(".overlay");
+    const emailForm = document.querySelector(".popup .content");
 
     const closeBtn = overlay.querySelector(".close-button");
-    const status = overlay.querySelector(".close-button");
 
-    const nameInput = emailForm.querySelector(".feedback-name");
-    const phoneInput = emailForm.querySelector(".feedback-phone");
-    const emailInput = emailForm.querySelector(".feedback-email");
-    const msgInput = emailForm.querySelector(".feedback-message");
-
-    const submitBtn = emailForm.querySelector("input[type='submit']");
+    const nameInput = emailForm.querySelector(".input-name");
+    const phoneInput = emailForm.querySelector(".input-phone");
+    const emailInput = emailForm.querySelector(".input-email");
+    const msgInput = emailForm.querySelector(".input-message");
+    const submitBtn = emailForm.querySelector("input-submit");
 
     let template = ``;
 

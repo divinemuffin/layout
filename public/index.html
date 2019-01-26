@@ -5,28 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Best site in the world</title>
-
     <link rel="stylesheet" href="./styles/styles.css">
-
-    <!-- <script src="./js/slider.js" defer></script> -->
     <script src="./js/popup.js" defer></script>
 </head>
 <body>
-    <section class="l-popup">
-        <div class="overlay">
-            <div class="popup">
-                <h2 class="header">Do you have any feedback?</h2>
-                <a class="close-button" href="#">&times;</a>
-                <!-- <form class="content" method="POST" action="https://us-central1-nod-test-38899.cloudfunctions.net/sendMail"> -->
-                <form class="content">
-                    <input type="text" class="feedback-name feedback-formfield" placeholder="Your name *" required>
-                    <input type="tel" class="feedback-phone feedback-formfield" placeholder="Your phone *" required>
-                    <p class="text">Hello, would you like to share your Email adress with us for some fun time?</p>
-                    <input type="email" class="feedback-email feedback-formfield" placeholder="Email address *" required>
-                    <textarea cols="30" rows="4" class="feedback-message feedback-formfield" placeholder="Write your message here"></textarea>
-                    <input type="submit" class="feedback-submit" disabled>
-                </form>
-            </div>
+    <section class="l-popup overlay">
+        <div class="popup">
+            <h2 class="header">Do you have any feedback?</h2>
+            <a class="close-button" href="#">&times;</a>
+            <form class="content">
+                <input type="text" class="input input-name" placeholder="Your name *" required>
+                <input type="tel" class="input input-phone" placeholder="Your phone *" required>
+                <p class="text">Hello, would you like to share your Email adress with us for some fun time?</p>
+                <input type="email" class="input input-email" placeholder="Email address *" required>
+                <textarea cols="30" rows="4" class="input-textarea input" placeholder="Write your message here"></textarea>
+                <input type="submit" class="input input-submit" disabled>
+            </form>
         </div>
     </section>
 
