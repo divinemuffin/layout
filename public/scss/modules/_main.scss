@@ -1,68 +1,24 @@
-.l-main {
-    .leftblock {
-        min-width: 20%;
-        padding: $pad-xsmall;
-        .sidemenu {
-            list-style: none;
-            .menu-item {
-                position: relative;
-                margin: $mar-xsmall-y;
-            }
-            .submenu {
-                display: none;
-                width: 100%;
-                margin-left: 10%;
-                padding: 0;
-                .menu-subitem {
-                    margin: $mar-xsmall-y;
-                }
-            }
-            & > .menu-item:hover > .submenu {
-                display: block;
-            }
-        }
-        .pricelist {
-            text-align: center;
-            margin-top: 80px;
-            .link {
-                color: $color-link-dark;
-            }
-        }
+.leftblock {
+    min-width: 20%;
+    padding: $pad-xsmall;
+    .pricelist {
+        margin-top: 80px;
     }
-    .rightblock {
-        margin: $mar-xsmall-x;
-        padding: $pad-xsmall;
-        .cards {
-            @extend %flex-start;
-            .card {
-                max-width: 200px;
-                padding: $pad-small;
-                margin: $mar-xsmall;
-                background: $nod-bg-primary-shade1;
-                color: $nod-text-light-shade2;
-                
-                .card-actions {
-                    @extend %flex-justify;
-                    margin: $mar-xsmall-y;
-                    color: $nod-text-primary;
-                }
-            }
-        }
-        .navigation {
-            @extend %flex-center;
-            list-style: none;
-            margin: $mar-xsmall-y;
-            margin-bottom: 40px;
-            .nav-item {
-                padding: $pad-xsmall-x;
-            }
-        }
-        .about {
-            @extend %flex-justify;
-            .col {
-                width: 48%;
-            }
-        }
-    }
-    
 }
+
+.rightblock {
+    margin: $mar-xsmall-x;
+    padding: $pad-xsmall;
+    .cards {
+        @extend %container-flex;
+        justify-content: start;
+    }
+    .about {
+        @extend %container-flex;
+        justify-content: space-between;
+        .col {
+            width: 48%;
+        }
+    }
+}
+

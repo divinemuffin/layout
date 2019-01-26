@@ -1,67 +1,38 @@
-.l-header {
-    // Header Elements
+// Header Elements
 
-    .upper-header {
-        @extend %flex-justify-align;
-        min-height: 175px;
-    
-        .logo {
-            @extend %container-inline;
-        }
-        .logo .image {
-            height: 60px;
-            width: 60px;
-            background: $nod-bg-primary-shade2;
-            margin: 10px;
-        }
-        .contacts {
-            font-family: $font-family-thin;
-            .link {
-                color: $nod-bg-primary-shade2;
-                font-weight: bold;
-            }
-        }
-    }
-    .lower-header, 
-    .lower-header .menu-item .link {
+.upper-header {
+    @extend %container-flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 175px;
+
+    .logo .image {
+        height: 60px;
+        width: 60px;
         background: $nod-bg-primary-shade2;
-        color: $nod-text-light-shade1;
     }
-    .lower-header {
-        .menu {
-            @extend %flex-center;
-            font-size: 160%;
-            padding: 2.5vw;
-            line-height: 30px;
-        }
-        .menu .menu-item:not(:first-child):before {
-            content: "|";
-            padding: 0px 10px;
-            text-align: center;
+    .contacts {
+        font-family: $font-family-thin;
+        .link {
+            color: $nod-bg-primary-shade2;
+            font-weight: bold;
         }
     }
-    
+}
+.lower-header, 
+.lower-header .menu-item .link {
+    color: $nod-text-light-shade1;
+}
+.lower-header {
+    background: $nod-bg-primary-shade2;
 
-    // header section {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     padding: 0px 10px;
-    // }
-
-    // .menu-wrap {
-    //     background: var(--gray);
-    // }
-
-
-    // .menu-wrap .menu .menu-item {
-    //     margin: 5px;
-    // }
-    // .menu-wrap .menu .menu-item:not(:first-child):before {
-    //     content: " | ";
-    //     padding-right: 5px;
-    // }
-    // .menu-wrap .menu .menu-item a {
-    //     color:var(--pure_white);
-    // }
+    .menu-big {
+        @extend %container-flex;
+        justify-content: center;
+    }
+    .menu-big .menu-item:not(:first-child):before {
+        content: "|";
+        padding: 0px 10px;
+        text-align: center;
+    }
 }

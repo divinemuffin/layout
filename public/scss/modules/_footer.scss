@@ -1,10 +1,11 @@
 .footer-wrap {
-    @extend %flex-justify-align;
+    @extend %container-flex;
+    justify-content: space-between;
+    align-items: center;
     padding: $pad-xsmall;
     .col, .col a {
         color: $nod-text-light-shade1;
     }
-
     .col.company-link {
         @extend %container-inline;
     }

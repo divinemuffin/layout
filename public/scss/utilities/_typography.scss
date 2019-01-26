@@ -7,6 +7,7 @@
 // $base-font-size - {number}
 
 $base-font-size: 14px;
+$base-font-size-l: 20px;
 
 // $base-line-height
 //
@@ -15,6 +16,7 @@ $base-font-size: 14px;
 // $base-line-height - {number}
 
 $base-line-height: 22px;
+$base-line-height-l: 30px;
 
 // Font Stacks
 
@@ -85,7 +87,11 @@ $font-family-display:         $font-family-sans-custom;
 // $font-family-default - {string}
 // @requires - `$font-family-sans`
 
-$font-family-default:         $font-family-sans-custom;
-$font-family-thin:            $font-family-sans-custom-thin;
-$font-size-default:           $base-font-size;
-$line-height-default:         $base-line-height;
+$font-family-default:           $font-family-sans-custom;
+$font-family-thin:              $font-family-sans-custom-thin;
+
+$font-size-default:             $base-font-size;
+$font-size-large:               $base-font-size-l;
+
+$line-height-default:           $base-line-height;
+$line-height-large:             $base-line-height-l;

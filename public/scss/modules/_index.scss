@@ -36,47 +36,44 @@
 }
 %container-flex {
     display: flex;
-}
-%flex-justify {
-    @extend %container-flex;
-    justify-content: space-between;
-}
-%flex-justify-align {
-    @extend %container-flex;
-    @extend %flex-justify;
-    align-items: center;
-    flex-wrap: wrap;
-}
-%flex-center {
-    @extend %container-flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-%flex-start {
-    @extend %container-flex;
-    justify-content: start;
     flex-wrap: wrap;
 }
 .container-980 {
-    @extend %flex-justify;
+    @extend %container-flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     max-width: 980px;
     margin: 0 auto;
     padding: $pad-xsmall-x;
 }
-.menu {
-    list-style: none;
-}
-
 
 .logo {
-    margin: $mar-xsmall;
-    line-height: 0;
+    @extend %container-inline;
+    // margin: $mar-xsmall;
+
+    .image {
+        line-height: 0;
+        margin: $mar-med;
+    }
+    .text {
+        @extend %container;
+        align-items: center;
+        text-align: left
+    }
+}
+.logo-list {
+    color: $color-link-dark;
+    display: inline;
+    text-align: center;
 }
 
 // Layout Modules with Elements
 
 @import 'popup';
 @import 'header';
+    @import 'menu';
 @import 'slider';
 @import 'main';
+    @import 'navigation';
+    @import 'card';
 @import 'footer';

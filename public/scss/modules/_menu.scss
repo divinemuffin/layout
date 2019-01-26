@@ -1,0 +1,29 @@
+// List with navigation hyperlinks, directed to pages at the same domain.
+// Usually referred to independent page or ancored a content on the same one.
+
+.menu {
+    list-style: none;
+    .menu-item {
+        position: relative;
+        margin: $mar-xsmall-y;
+
+        &:hover > .submenu {
+            @extend %container;
+        }
+    }
+    .submenu {
+        display: none;
+        width: 100%;
+        margin-left: 10%;
+        padding: 0;
+        .menu-subitem {
+            margin: $mar-xsmall-y;
+        }
+    }
+}
+.menu-big {
+    @extend .menu;
+    font-size: 160%;
+    padding: 2.5vw;
+    line-height: $line-height-large;
+}

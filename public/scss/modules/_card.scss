@@ -1,0 +1,18 @@
+// Cards are blocks with content. Usually contain picture and text as well as
+// buttons of the same type, connected with item of this card.
+// Wrapped with .cards element.
+
+.card {
+    max-width: 200px;
+    padding: $pad-small;
+    margin: $mar-xsmall;
+    background: $nod-bg-primary-shade1;
+    color: $nod-text-light-shade2;
+    
+    .card-actions {
+        @extend %container-flex;
+        justify-content: space-between;
+        margin: $mar-xsmall-y;
+        color: $nod-text-primary;
+    }
+}

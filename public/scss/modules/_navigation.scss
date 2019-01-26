@@ -1,0 +1,14 @@
+// Usually, horizontal numbers of pages to navigate through big lists of content
+//              1  2  3  4  5  6  7
+
+.navigation {
+    @extend %container-flex;
+    justify-content: center;
+    
+    list-style: none;
+    margin: $mar-xsmall-y;
+    margin-bottom: 40px;
+    .nav-item {
+        padding: $pad-xsmall-x;
+    }
+}
