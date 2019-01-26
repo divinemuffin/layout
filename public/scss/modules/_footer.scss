@@ -1,17 +1,11 @@
-.l-footer {
-    .footer-wrap {
-        @extend %flex-justify-align;
-        padding: $pad-xsmall;
-        .col, .col a {
-            color: $nod-text-light-shade1;
-        }
+.footer-wrap {
+    @extend %flex-justify-align;
+    padding: $pad-xsmall;
+    .col, .col a {
+        color: $nod-text-light-shade1;
+    }
 
-        .col.company-link {
-            @extend %container-inline;
-            .logo {
-                margin: $mar-xsmall;
-                line-height: 0;
-            }
-        }
+    .col.company-link {
+        @extend %container-inline;
     }
 }

@@ -49,6 +49,22 @@
         overlay.style.visibility = "hidden";
     });
 
+    document.onkeydown = function(evt) {
+        // adding listener on "esc" key press 
+        // to close popup
+        evt = evt || window.event;
+        var isEscape = false;
+        if ("key" in evt) {
+            isEscape = (evt.key == "Escape" || evt.key == "Esc");
+        } else {
+            isEscape = (evt.keyCode == 27);
+        }
+        if (isEscape) {
+            overlay.style.opacity = 0;
+            overlay.style.visibility = "hidden";
+        }
+    };
+
 
     emailForm.addEventListener("submit", e => {
         e.preventDefault();

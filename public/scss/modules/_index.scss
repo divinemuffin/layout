@@ -67,6 +67,12 @@
     list-style: none;
 }
 
+
+.logo {
+    margin: $mar-xsmall;
+    line-height: 0;
+}
+
 // Layout Modules with Elements
 
 @import 'popup';

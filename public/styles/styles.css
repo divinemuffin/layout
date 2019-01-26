@@ -1,52 +1,3 @@
-body {
-  -webkit-font-smoothing: antialiased;
-  color: #9d9d9d;
-  min-height: 100%;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Sans Reg", "Lucida Sans Regular", sans-serif, "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 22px; }
-
-a {
-  background: transparent;
-  color: #9d9d9d;
-  text-decoration: none;
-  transition: color .2s; }
-
-a:hover {
-  color: #444444;
-  text-decoration: underline; }
-
-img {
-  max-width: 100%; }
-
-input, textarea {
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  color: #333333;
-  background: #fff;
-  border: 1px solid #777777;
-  border-radius: 4px; }
-
-textarea {
-  max-width: 100%;
-  min-height: 22px; }
-
-hr {
-  border: 1px solid #dadbdf;
-  background: #dadbdf;
-  border-radius: 20%;
-  height: 0px;
-  margin: 15px 0px; }
-
 @viewport {
   width: device-width; }
 
@@ -75,6 +26,52 @@ p {
 
 ul {
   padding: 0px; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #9d9d9d;
+  min-height: 100%;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Sans Reg", "Lucida Sans Regular", sans-serif, "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px; }
+
+a {
+  background: transparent;
+  color: #9d9d9d;
+  text-decoration: none;
+  transition: color .2s; }
+
+a:hover {
+  color: #444444;
+  text-decoration: underline; }
+
+img {
+  max-width: 100%; }
+
+input, textarea {
+  box-sizing: border-box;
+  display: block;
+  color: #333333;
+  background: #fff;
+  border: 1px solid #777777;
+  border-radius: 4px; }
+
+textarea {
+  max-width: 100%;
+  min-height: 22px; }
+
+hr {
+  border: 1px solid #dadbdf;
+  background: #dadbdf;
+  border-radius: 20%;
+  height: 0px;
+  margin: 15px 0px; }
 
 .l-header {
   width: 100%;
@@ -224,15 +221,17 @@ ul {
   text-align: center; }
 
 .l-slider .slider-wrap {
-  height: 462px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  max-height: 462px;
+  height: 40vw; }
 
 .l-slider .photo {
   position: absolute;
   animation: round 8s infinite;
   opacity: 0;
-  height: max-content; }
+  width: 100%;
+  height: 100%; }
 
 @keyframes round {
   10% {
@@ -301,6 +300,14 @@ ul {
   .l-footer .footer-wrap .col.company-link .logo {
     margin: 5px;
     line-height: 0; }
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 2vw;
+    line-height: 2.5vw; }
+  a {
+    font-size: 2vw;
+    line-height: 2.5vw; } }
 
 @media print {
   *:before, *:after {
