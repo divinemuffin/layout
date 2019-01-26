@@ -14,14 +14,9 @@
     .contacts {
         font-family: $font-family-thin;
         .link {
-            color: $nod-bg-primary-shade2;
             font-weight: bold;
         }
     }
-}
-.lower-header, 
-.lower-header .menu-item .link {
-    color: $nod-text-light-shade1;
 }
 .lower-header {
     background: $nod-bg-primary-shade2;
@@ -32,7 +27,7 @@
     }
     .menu-big .menu-item:not(:first-child):before {
         content: "|";
-        padding: 0px 10px;
+        padding: $pad-med-x;
         text-align: center;
     }
 }

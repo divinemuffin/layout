@@ -10,5 +10,10 @@
     margin-bottom: 40px;
     .nav-item {
         padding: $pad-xsmall-x;
+
+        &.active .link {
+            font-size: 130%;
+            color: $nod-text-primary-shade2;
+        }
     }
 }

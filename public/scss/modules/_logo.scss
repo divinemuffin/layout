@@ -1,0 +1,17 @@
+.logo {
+    @extend %container-inline;
+    .image {
+        line-height: 0;
+        margin: $mar-med;
+    }
+    .text {
+        @extend %container;
+        align-items: center;
+        text-align: left
+    }
+}
+.logo-list {
+    color: $color-link-dark;
+    display: inline;
+    text-align: center;
+}

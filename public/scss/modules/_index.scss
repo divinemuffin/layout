@@ -21,7 +21,7 @@
 // Usually I add prefives to casses, but modules are most common unit so I just use their
 // names without any prefix;
 
-// General Modules
+// General Elements
 
 %container {
     display: block;
@@ -47,31 +47,12 @@
     padding: $pad-xsmall-x;
 }
 
-.logo {
-    @extend %container-inline;
-    // margin: $mar-xsmall;
-
-    .image {
-        line-height: 0;
-        margin: $mar-med;
-    }
-    .text {
-        @extend %container;
-        align-items: center;
-        text-align: left
-    }
-}
-.logo-list {
-    color: $color-link-dark;
-    display: inline;
-    text-align: center;
-}
-
 // Layout Modules with Elements
-
 @import 'popup';
 @import 'header';
     @import 'menu';
+    @import 'links';
+    @import 'logo';
 @import 'slider';
 @import 'main';
     @import 'navigation';

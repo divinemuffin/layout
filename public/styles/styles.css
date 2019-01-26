@@ -89,10 +89,10 @@ hr {
   background: #777777;
   margin-top: 120px; }
 
-.logo .text, .menu .menu-item:hover > .submenu, .menu-big .menu-item:hover > .submenu {
+.menu .menu-item:hover > .submenu, .menu-big .menu-item:hover > .submenu, .logo .text {
   display: block; }
 
-.logo, .footer-wrap .col.company-link {
+.logo {
   display: inline-flex;
   justify-content: space-between;
   align-items: center; }
@@ -107,19 +107,6 @@ hr {
   max-width: 980px;
   margin: 0 auto;
   padding: 0px 5px; }
-
-.logo .image {
-  line-height: 0;
-  margin: 15px; }
-
-.logo .text {
-  align-items: center;
-  text-align: left; }
-
-.logo-list {
-  color: #333333;
-  display: inline;
-  text-align: center; }
 
 .l-popup .overlay {
   position: fixed;
@@ -204,12 +191,7 @@ hr {
   .upper-header .contacts {
     font-family: "Sans Thin", "Lucida Sans Regular", sans-serif, "Arial", sans-serif; }
     .upper-header .contacts .link {
-      color: #777777;
       font-weight: bold; }
-
-.lower-header,
-.lower-header .menu-item .link {
-  color: #dadbdf; }
 
 .lower-header {
   background: #777777; }
@@ -217,7 +199,7 @@ hr {
     justify-content: center; }
   .lower-header .menu-big .menu-item:not(:first-child):before {
     content: "|";
-    padding: 0px 10px;
+    padding: 0px 15px;
     text-align: center; }
 
 .menu, .menu-big {
@@ -237,6 +219,25 @@ hr {
   font-size: 160%;
   padding: 2.5vw;
   line-height: 30px; }
+
+.link.dark {
+  color: #777777; }
+
+.link.light {
+  color: #dadbdf; }
+
+.logo .image {
+  line-height: 0;
+  margin: 15px; }
+
+.logo .text {
+  align-items: center;
+  text-align: left; }
+
+.logo-list {
+  color: #333333;
+  display: inline;
+  text-align: center; }
 
 .l-slider .slider-wrap {
   overflow: hidden;
@@ -290,6 +291,9 @@ hr {
   margin-bottom: 40px; }
   .navigation .nav-item {
     padding: 0px 5px; }
+    .navigation .nav-item.active .link {
+      font-size: 130%;
+      color: #1f1f1f; }
 
 .card {
   max-width: 200px;
@@ -306,7 +310,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   padding: 5px; }
-  .footer-wrap .col, .footer-wrap .col a {
+  .footer-wrap .col {
     color: #dadbdf; }
 
 @media screen and (max-width: 500px) {
